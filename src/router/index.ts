@@ -20,8 +20,8 @@ const routes = [
     path: "/portfolio",
     component: PortfolioLayout,
     children: [
-      { path: "", component: NotResponsivePortfolio },
-      { path: "responsive", component: ResponsivePortfolio },
+      { path: "/", component: NotResponsivePortfolio },
+      { path: "/responsive", component: ResponsivePortfolio },
     ],
   },
 ];
