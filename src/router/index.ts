@@ -6,6 +6,7 @@ import ResponsivePortfolio from "../pages/ResponsivePortfolio.vue";
 import NotResponsivePortfolio from "../pages/NotResponsivePortfolio.vue";
 import BaseLayout from "../layouts/BaseLayout.vue";
 import PortfolioLayout from "../layouts/PortfolioLayout.vue";
+import NotFound from "../pages/404.vue";
 
 const routes = [
   {
@@ -17,12 +18,16 @@ const routes = [
     ],
   },
   {
-    path: "/portfolio",
+    path: "/",
     component: PortfolioLayout,
     children: [
-      { path: "/", component: NotResponsivePortfolio },
-      { path: "/responsive", component: ResponsivePortfolio },
+      { path: "/portfolio", component: NotResponsivePortfolio },
+      { path: "/portfolio/responsive", component: ResponsivePortfolio },
     ],
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: NotFound,
   },
 ];
 
