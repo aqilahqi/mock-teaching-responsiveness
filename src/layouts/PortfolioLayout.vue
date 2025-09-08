@@ -4,7 +4,7 @@
         <router-view />
 
         <!-- Dock -->
-        <div class="dock dock-lg absolute bottom-0 left-0 w-full bg-base-200 shadow-md">
+        <div class="dock dock-lg fixed bottom-0 left-0 w-full bg-base-200 shadow-md">
             <router-link to="/portfolio" class="dock-item" :class="{ 'dock-active': $route.path === '/portfolio' }">
                 <!-- Not Responsive Icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
